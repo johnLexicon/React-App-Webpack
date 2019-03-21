@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Hello from "./Hello";
+import FullPage from "./Components/Common/FullPage";
 
-ReactDOM.render(<Hello />, document.getElementById("app"));
+ReactDOM.render(<FullPage />, document.getElementById("app"));

@@ -12,7 +12,8 @@ const config = {
   devServer: {
     contentBase: PUBLIC_DIR, //Webserver's base directory
     port: 9000, //Default port
-    open: true //Open webserver by default.
+    open: true, //Open webserver by default.
+    historyApiFallback: true
   },
   output: {
     path: PUBLIC_DIR,
