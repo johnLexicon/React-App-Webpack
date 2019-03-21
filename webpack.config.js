@@ -17,6 +17,23 @@ const config = {
   output: {
     path: PUBLIC_DIR,
     filename: "bundle.js"
+  },
+  devtool: "source-map", //Tells webpack to create a source map that our debug tools will use.
+  module: {
+    rules: [
+      {
+        test: /\.js?$/, // Apply Babel to all js files (Do not need then to specify jsx as file extension).
+        loader: "babel-loader",
+        exclude: /node-modules/, //Tell Babel not to include content from node-modules folder.
+        options: {
+          presets: [
+            "react",
+            "stage-2", // Stage 2 javascript features (which includes e.g promises)
+            ["env", { targets: { browsers: ["last 2 versions"] } }] // The latest to browsers for compatibility.
+          ]
+        }
+      }
+    ]
   }
 };
 
